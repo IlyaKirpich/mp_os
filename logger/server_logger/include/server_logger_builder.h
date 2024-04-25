@@ -1,7 +1,25 @@
 #ifndef MATH_PRACTICE_AND_OPERATING_SYSTEMS_SERVER_LOGGER_BUILDER_H
 #define MATH_PRACTICE_AND_OPERATING_SYSTEMS_SERVER_LOGGER_BUILDER_H
 
+#ifdef _WIN32
+    #define CONSOLE_STREAM "CON"
+    #include <conio.h>
+    #include <windows.h>
+#else
+    #define CONSOLE_STREAM "/dev/tty"
+    #include <unistd.h>
+    #include <mqueue.h>
+    #include <fcntl.h>
+    #include <sys/stat.h>
+    #include <sys/types.h>
+#endif
+
+#include <cstring>
+
+#include <nlohmann/json.hpp>
 #include <logger_builder.h>
+
+#include "server_logger.h"
 
 class server_logger_builder final:
     public logger_builder

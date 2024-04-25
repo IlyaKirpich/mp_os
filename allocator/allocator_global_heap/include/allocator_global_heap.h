@@ -1,6 +1,7 @@
 #ifndef MATH_PRACTICE_AND_OPERATING_SYSTEMS_ALLOCATOR_ALLOCATOR_GLOBAL_HEAP_H
 #define MATH_PRACTICE_AND_OPERATING_SYSTEMS_ALLOCATOR_ALLOCATOR_GLOBAL_HEAP_H
 
+#include <cstdint>
 #include <allocator.h>
 #include <logger.h>
 #include <logger_guardant.h>
@@ -11,7 +12,7 @@ class allocator_global_heap final:
     private logger_guardant,
     private typename_holder
 {
-
+ 
 private:
     
     logger *_logger;
@@ -43,11 +44,6 @@ public:
     
     void deallocate(
         void *at) override;
-
-public:
-    
-    void foo()
-    {};
 
 private:
     

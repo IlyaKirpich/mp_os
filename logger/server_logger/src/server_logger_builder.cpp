@@ -2,45 +2,27 @@
 
 #include "../include/server_logger_builder.h"
 
-server_logger_builder::server_logger_builder()
-{
-    throw not_implemented("server_logger_builder::server_logger_builder()", "your code should be here...");
-}
+server_logger_builder::server_logger_builder() = default;
 
 server_logger_builder::server_logger_builder(
-    server_logger_builder const &other)
-{
-    throw not_implemented("server_logger_builder::server_logger_builder(server_logger_builder const &other)", "your code should be here...");
-}
+    server_logger_builder const &other) = default;
 
 server_logger_builder &server_logger_builder::operator=(
-    server_logger_builder const &other)
-{
-    throw not_implemented("server_logger_builder &server_logger_builder::operator=(server_logger_builder const &other)", "your code should be here...");
-}
+    server_logger_builder const &other) = default;
 
 server_logger_builder::server_logger_builder(
-    server_logger_builder &&other) noexcept
-{
-    throw not_implemented("server_logger_builder::server_logger_builder(server_logger_builder &&other) noexcept", "your code should be here...");
-}
+    server_logger_builder &&other) = default;
 
 server_logger_builder &server_logger_builder::operator=(
-    server_logger_builder &&other) noexcept
-{
-    throw not_implemented("server_logger_builder &server_logger_builder::operator=(server_logger_builder &&other) noexcept", "your code should be here...");
-}
+    server_logger_builder &&other) noexcept = default;
 
-server_logger_builder::~server_logger_builder() noexcept
-{
-    throw not_implemented("server_logger_builder::~server_logger_builder() noexcept", "your code should be here...");
-}
+server_logger_builder::~server_logger_builder() noexcept = default;
 
 logger_builder *server_logger_builder::add_file_stream(
     std::string const &stream_file_path,
     logger::severity severity)
 {
-    throw not_implemented("logger_builder *server_logger_builder::add_file_stream(std::string const &stream_file_path, logger::severity severity)", "your code should be here...");
+    
 }
 
 logger_builder *server_logger_builder::add_console_stream(
